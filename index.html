@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CyberShield - Cybersecurity Awareness</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+  <canvas id="matrix"></canvas>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#" onclick="navigateTo('home')">Home</a></li>
+      <li><a href="#" onclick="navigateTo('about')">About</a></li>
+      <li><a href="#" onclick="navigateTo('modules')">Modules</a></li>
+      <li><a href="#" onclick="navigateTo('quiz')">Quiz</a></li>
+      <li><a href="#" onclick="navigateTo('daily-tip')">Tip</a></li>
+      <li><a href="#" onclick="navigateTo('resources')">Resources</a></li>
+    </ul>
+  </nav>
+
+  <!-- All Sections -->
+  <main>
+    <section id="home">
+      <div class="split-section">
+        <div class="text-half">
+          <h1 class="glitch-text">CyberShield</h1>
+          <p class="typing-effect">Stay Safe in the Digital World</p>
+          <button class="next-button" onclick="goToNextSection('home')">Next ➜</button>
+        </div>
+        <div class="image-half">
+          <img src="images/cyber-lock.png" alt="Cyber Visual">
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="hidden">
+      <div class="split-section">
+        <div class="text-half">
+          <h2>About CyberShield</h2>
+          <p>CyberShield is a cybersecurity awareness platform designed for students and professionals to learn digital safety interactively.</p>
+          <button class="next-button" onclick="goToNextSection('about')">Next ➜</button>
+        </div>
+        <div class="image-half">
+          <img src="images/cyber-lock.png" alt="Cyber Visual">
+        </div>
+      </div>
+    </section>
+
+    <section id="modules" class="hidden">
+      <div class="split-section">
+        <div class="text-half">
+          <h2>What You'll Learn</h2>
+          <ul class="modules">
+            <li>Phishing & Social Engineering</li>
+            <li>Password Management</li>
+            <li>Safe Browsing Habits</li>
+            <li>Mobile App Safety</li>
+            <li>Email Scams</li>
+          </ul>
+          <button class="next-button" onclick="goToNextSection('modules')">Next ➜</button>
+        </div>
+        <div class="image-half">
+          <img src="images/cyber-lock.png" alt="Cyber Visual">
+        </div>
+      </div>
+    </section>
+
+    <section id="quiz" class="hidden">
+      <div class="split-section">
+        <div class="text-half">
+          <h2 class="typing-effect">Cyber Safety Quiz</h2>
+          <div id="quiz-container">Loading quiz...</div>
+          <div class="quiz-controls">
+            <button id="prev-btn" disabled>Previous</button>
+            <span id="question-counter">Question 1 of 10</span>
+            <button id="next-btn">Next</button>
+          </div>
+          <button id="submit-quiz" style="display: none;">Submit Quiz</button>
+          <div id="quiz-result"></div>
+          <button class="next-button" onclick="goToNextSection('quiz')">Next ➜</button>
+        </div>
+        <div class="image-half">
+          <img src="images/cyber-lock.png" alt="Cyber Visual">
+        </div>
+      </div>
+    </section>
+
+    <section id="daily-tip" class="hidden">
+      <div class="split-section">
+        <div class="text-half">
+          <h2>Real-Time Cyber Tip</h2>
+          <p id="tip-text">Loading tip...</p>
+          <button class="next-button" onclick="goToNextSection('daily-tip')">Next ➜</button>
+        </div>
+        <div class="image-half">
+          <img src="images/cyber-lock.png" alt="Cyber Visual">
+        </div>
+      </div>
+    </section>
+
+    <section id="resources" class="hidden">
+      <div class="split-section">
+        <div class="text-half">
+          <h2>Cyber Toolkit</h2>
+          <ul>
+            <li><a href="https://owasp.org/www-project-top-ten/" target="_blank">OWASP Top 10 Web Vulnerabilities</a></li>
+            <li><a href="https://www.cisa.gov/cyber-essentials" target="_blank">CISA Cyber Essentials</a></li>
+          </ul>
+          <button class="next-button" onclick="navigateTo('home')">Return to home</button>
+        </div>
+        <div class="image-half">
+          <img src="images/cyber-lock.png" alt="Cyber Visual">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 CyberShield. Stay Safe Online.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init();</script>
+</body>
+</html>
+
+
